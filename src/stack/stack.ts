@@ -2,6 +2,9 @@ class Stack {
     capacity: number;
     private _data: Array<any>;
     private _top: number = -1;
+    constructor() {
+        this._data = [];
+    }
     push(val) {
         this._data[++this._top] = val;
     }
@@ -24,3 +27,6 @@ class Stack {
         return this._data[this._top];
     }
 }
+module.exports =  {
+    Stack: Stack
+};

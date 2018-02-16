@@ -7,15 +7,11 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": ["es6", "dom"]
+    "moduleResolution": "node"
   },
   "exclude": [
     "node_modules"
   ],
   "compileOnSave": false,
-  "buildOnSave": false,
+  "buildOnSave": false
 }
