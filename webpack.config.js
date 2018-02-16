@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 // Webpack Config
 var webpackConfig = {
   entry: {
-    'main': './src/stack/stack.ts',
+    'main': './src/index.ts',
   },
 
   output: {

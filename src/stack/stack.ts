@@ -1,4 +1,4 @@
-class Stack {
+export class Stack {
     capacity: number;
     private _data: Array<any>;
     private _top: number = -1;
@@ -27,6 +27,6 @@ class Stack {
         return this._data[this._top];
     }
 }
-module.exports =  {
+/*module.exports =  {
     Stack: Stack
-};
+};*/

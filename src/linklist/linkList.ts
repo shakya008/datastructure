@@ -1,4 +1,4 @@
-class ListNode {
+export class ListNode {
 	data: number|string;
 	next: ListNode;
 	constructor(data?) {
@@ -7,7 +7,7 @@ class ListNode {
 	}
 }
 
-class LinkedList {
+export class LinkedList {
 	head: ListNode;
 	tail: ListNode;
 	private _size: number;
@@ -123,15 +123,3 @@ class LinkedList {
 		return this._size;
 	}
 }
-
-let linkList = new LinkedList();
-const node = new ListNode(1);
-
-linkList.appendNode(node);
-const node1 = new ListNode(2);
-linkList.appendNode(node1);
-linkList.appendNode(new ListNode(10));
-
-linkList.printList();
-console.log(linkList.getFirstNode().data);
-console.log(linkList.getLastNode().data);
