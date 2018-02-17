@@ -1,22 +1,22 @@
-export class ListNode {
-	data: number|string;
-	next: ListNode;
+export class ListNode<T> {
+	data: T;
+	next: ListNode<T>;
 	constructor(data?) {
 		this.data = data;
 		this.next = null;
 	}
 }
 
-export class LinkedList {
-	head: ListNode;
-	tail: ListNode;
+export class LinkedList<T> {
+	head: ListNode<T>;
+	tail: ListNode<T>;
 	private _size: number;
 	constructor() {
 		this.head = null;
 		this.tail = this.head;
 		this._size = 0;
 	}
-	appendNode(node: ListNode) {
+	appendNode(node: ListNode<T>) {
 		if (node === undefined) {
 			return;
 		}
@@ -30,7 +30,7 @@ export class LinkedList {
 		}
 		this._size++;
 	}
-	prependNode(node: ListNode) {
+	prependNode(node: ListNode<T>) {
 		if (node === undefined) {
 			return;
 		}
@@ -43,13 +43,13 @@ export class LinkedList {
 		}
 		this._size++;
 	}
-	insert(pos: number, node: ListNode) {
+	insert(pos: number, node: ListNode<T>) {
 		if (pos === 1) {
 			this.appendNode(node);
 		} else if (pos === this._size + 1) {
 			this.prependNode(node);
 		} else {
-			let temp: ListNode = this.head;
+			let temp: ListNode<T> = this.head;
 			let counter = 1;
 			while(counter !== pos - 1 && temp.next !== null) {
 				temp = temp.next;
@@ -68,7 +68,7 @@ export class LinkedList {
 		if (this.head === null) {
 			return 0;
 		}
-		let temp: ListNode = this.head;
+		let temp: ListNode<T> = this.head;
 		this.head = temp.next;
 		temp.next = null;
 		this._size--;
@@ -77,7 +77,7 @@ export class LinkedList {
 		if (this.head === null) {
 			return 0;
 		}
-		let temp: ListNode = this.head;
+		let temp: ListNode<T> = this.head;
 		while(temp.next !== this.tail) {
 			temp = temp.next;
 		}
@@ -95,7 +95,7 @@ export class LinkedList {
 		} else if (index === this._size) {
 			this.deleteLastNode();
 		} else {
-			let temp: ListNode = this.head;
+			let temp: ListNode<T> = this.head;
 			let counter = 1;
 			while(counter !== index - 1) {
 				temp = temp.next;
@@ -107,7 +107,7 @@ export class LinkedList {
 
 	}
 	printList() {
-		let temp: ListNode = this.head;
+		let temp: ListNode<T> = this.head;
 		while(temp !== null) {
 			console.log(temp.data);
 			temp = temp.next;
@@ -119,7 +119,7 @@ export class LinkedList {
 	getFirstNode() {
 		return this.head;
 	}
-	size() {
+	size(): number {
 		return this._size;
 	}
 }
