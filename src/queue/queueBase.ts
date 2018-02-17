@@ -9,7 +9,7 @@ export class QueueBase<T>{
 		this._capacity = capacity || 0;
 		this._data = new Array<T>(this._capacity);
 	}
-	public isEmpty() {
+	public isEmpty(): boolean {
 		return this._rear === this._front;
 	}
 	public validateAndThrowError() {
@@ -20,7 +20,7 @@ export class QueueBase<T>{
 	}
 	public front(): T {
 		this.validateAndThrowError();
-		return this._data[this._front];
+		return this._data[this._front + 1];
 	}
 
 	public rear(): T {
