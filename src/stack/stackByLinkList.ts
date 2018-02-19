@@ -7,7 +7,7 @@ export class StackList<T> {
 	private _capacity: number;
 	private _head: ListNode<T>;
 	private _size;
-	constructor(capacity: number) {
+	constructor(capacity?: number) {
 		this._capacity = capacity || 0;
 		this._head = null;
 		this._size = 0;

@@ -3,6 +3,10 @@ import { LinkedList, ListNode } from './linklist/linkList';
 import { Queue } from './queue/queue';
 import { CircularQueue } from './queue/circularQueue';
 import { StackList } from './stack/stackByLinkList';
+import { QueueByLinkList } from './queue/queueByLinkList';
+import { QueueByStack } from './queue/queueByStack';
+
+
 
 
 export { Stack,
@@ -10,5 +14,7 @@ export { Stack,
 		 ListNode,
 		 Queue,
 		 CircularQueue,
-		 StackList
+		 StackList,
+		 QueueByLinkList,
+		 QueueByStack
 		};
