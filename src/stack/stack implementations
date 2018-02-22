@@ -1,0 +1,8 @@
+1. Stack using array.
+2. Stack using single/double link list.
+3. Stack using circular link list.
+4. Stack using one/two queue.
+
+Special data structure of stacks
+1. Data structure like stack which supports operations like push, pop, isEmpty, isFull and getMin in O(1). Also add getMax.
+2. Implement 2 stack in a array.

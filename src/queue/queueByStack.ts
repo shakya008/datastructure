@@ -10,7 +10,7 @@ export class QueueByStack<T> {
 	push(val: T) {
 		this._stack.push(val);
 	}
-	pop() {
+	pop(): T {
 		if (this._stack.isEmpty()) {
 			throw new Error('Queue is empty');
 		}
