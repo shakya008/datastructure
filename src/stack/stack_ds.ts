@@ -26,10 +26,37 @@ export function reverseStack(stack: Stack<number>) {
 	}
 }
 
+/**
+* This function prints a stack in reverse using recusion
+*/
 export function printStackInReverse(stack: Stack<number>) {
 	if( !stack.isEmpty()) {
 		const top = stack.pop();
 		printStackInReverse(stack);
 		console.log(top);
+	}
+}
+
+/**
+* Sort a stack using recursion
+*/
+export function sortStackRecursion(stack: Stack<number>) {
+	if (!stack.isEmpty()) {
+		const top = stack.pop();
+		sortStackRecursion(stack );
+		insertAtBottom(stack, top);
+	}
+	return 0;
+}
+/**
+* This function pushes element in stack in sorted order.
+*/
+export function insertInSorted(stack: Stack<number>, val: number) {
+	if (stack.isEmpty() || val > stack.top()) {
+		stack.push(val);
+	} else {
+		const temp = stack.pop();
+		insertInSorted(stack, val);
+		stack.push(temp);
 	}
 }
