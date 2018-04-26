@@ -6,6 +6,8 @@ import { StackList } from './stack/stackByLinkList';
 import { SpecialStack } from './stack/specialStack';
 import { QueueByLinkList } from './queue/queueByLinkList';
 import { QueueByStack } from './queue/queueByStack';
+import  { Graph } from './graph/adjacencyGraph';
+
 export * from './stack/stack_ds';
 
 
@@ -19,5 +21,6 @@ export { Stack,
 		 StackList,
 		 QueueByLinkList,
 		 QueueByStack,
-		 SpecialStack
+		 SpecialStack,
+		 Graph
 		};
