@@ -9,7 +9,7 @@ import { QueueByStack } from './queue/queueByStack';
 import  { Graph } from './graph/adjacencyGraph';
 
 export * from './stack/stack_ds';
-
+export * from './array';
 
 
 
