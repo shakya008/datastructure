@@ -1,3 +1,7 @@
+/**
+* input array must be more than 2 size
+*/
+
 export function pivotRotatedArray(input: Array<number>, l: number, r: number) {
 	if (l<r) {
 		const mid = Math.floor(l + (r-l)/2);
